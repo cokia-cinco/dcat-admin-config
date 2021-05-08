@@ -17,13 +17,13 @@ class CreateConfigTable extends Migration
             $table->id();
             $table->string("tab");
             $table->string("key");
-            $table->string("name");
-            $table->string("value");
-            $table->text("help");
-            $table->string("element");
-            $table->tinyInteger("order");
-            $table->text("rule");
-            $table->json("options");
+            $table->string("name")->nullable();
+            $table->string("value")->nullable();
+            $table->text("help")->nullable();
+            $table->string("element")->nullable();
+            $table->tinyInteger("order",0);
+            $table->text("rule")->nullable();
+            $table->json("options")->nullable();
             $table->timestamps();
         });
     }

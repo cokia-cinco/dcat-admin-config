@@ -1,5 +1,5 @@
 {
-    "name": "cin/dcat-config",
+    "name": "cin/dcat-admin-config",
     "description": "配置项",
     "type": "library",
     "keywords": ["dcat-admin", "extension"],

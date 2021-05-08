@@ -7,28 +7,27 @@ use Dcat\Admin\Admin;
 
 class DcatConfigServiceProvider extends ServiceProvider
 {
-	protected $js = [
-        'js/index.js',
+    // 定义菜单
+    protected $menu = [
+        [
+            'title' => 'Config',
+            'uri' => 'config',
+            'icon' => 'fa-toggle-off', // 图标可以留空
+        ],
     ];
-	protected $css = [
-		'css/index.css',
-	];
 
-	public function register()
-	{
-		//
-	}
+    public function init()
+    {
+        parent::init();
+    }
 
-	public function init()
-	{
-		parent::init();
+    public function load()
+    {
 
-		//
-		
-	}
+    }
 
-	public function settingForm()
-	{
-		return new Setting($this);
-	}
+    public function settingForm()
+    {
+        return new Setting($this);
+    }
 }
