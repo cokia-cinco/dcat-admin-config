@@ -1,0 +1,31 @@
+{
+    "name": "cin/dcat-config",
+    "description": "配置项",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension"],
+    "homepage": "https://github.com/cokia-cinco/dcat-config.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cin",
+            "email": "cokia.cinco@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dcat\\Admin\\DcatConfig\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "Dcat\\Admin\\DcatConfig\\DcatConfigServiceProvider",
+        "laravel": {
+            "providers": [
+                "Dcat\\Admin\\DcatConfig\\DcatConfigServiceProvider"
+            ]
+        }
+    }
+}
