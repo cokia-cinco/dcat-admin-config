@@ -1,11 +1,11 @@
 <?php
 
-namespace Ghost\DcatConfig\Tools;
+namespace Dcat\Admin\DcatConfig\Tools;
 
 use Dcat\Admin\Actions\Action;
 use Dcat\Admin\Form;
 use Dcat\Admin\Widgets\Form as WidgetsForm;
-use Ghost\DcatConfig\DcatConfigServiceProvider;
+use Dcat\Admin\DcatConfig\DcatConfigServiceProvider;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -293,8 +293,8 @@ class Builder
      */
     public function all()
     {
-//        dd(collect(admin_setting_array("ghost::admin_config")));
-        return collect(admin_setting_array("ghost::admin_config"));
+//        dd(collect(admin_setting_array("cin::admin_config")));
+        return collect(admin_setting_array("cin::admin_config"));
     }
 
     /**
@@ -303,6 +303,6 @@ class Builder
     public function save()
     {
         dd($this->model);
-        return admin_setting(["ghost::admin_config" => $this->model]);
+        return admin_setting(["cin::admin_config" => $this->model]);
     }
 }

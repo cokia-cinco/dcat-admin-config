@@ -3,10 +3,10 @@
 namespace Dcat\Admin\DcatConfig\Http\Controllers;
 
 use Dcat\Admin\Form;
+use Dcat\Admin\DcatConfig\DcatConfigServiceProvider;
+use Dcat\Admin\DcatConfig\Tools\Builder;
 use Dcat\Admin\Layout\Content;
 use Dcat\Admin\Widgets\Tooltip;
-use Ghost\DcatConfig\DcatConfigServiceProvider;
-use Ghost\DcatConfig\Tools\Builder;
 use Illuminate\Routing\Controller;
 use Dcat\Admin\Layout\Row;
 use Illuminate\Support\Facades\DB;
@@ -172,7 +172,7 @@ class DcatConfigController extends Controller
                 }
             }
         }
-        return view('ghost.dcat-config::tree', ['data' => $data]);
+        return view('cin.dcat-config::tree', ['data' => $data]);
     }
 
     private function getModel(){

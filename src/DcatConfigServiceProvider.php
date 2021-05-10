@@ -16,18 +16,13 @@ class DcatConfigServiceProvider extends ServiceProvider
         ],
     ];
 
-    public function init()
-    {
-        parent::init();
-    }
+	public function init()
+	{
+		parent::init();
+	}
 
-    public function load()
-    {
-
-    }
-
-    public function settingForm()
-    {
-        return new Setting($this);
-    }
+	public function settingForm()
+	{
+		return new Setting($this);
+	}
 }
