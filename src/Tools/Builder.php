@@ -118,7 +118,7 @@ class Builder
             'element'=>$request['element'],
             'rule'=>$request['rule'],
             'help'=>$request['help'],
-            'updated_at'=>time(),
+            'updated_at'=>date('Y-m-d H:i:s',time()),
             'options'=>collect($this->textToArray($request['options']))->each(function ($item){
                 $item = explode(":",$item);
             })->toJson(),
