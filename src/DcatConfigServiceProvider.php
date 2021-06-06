@@ -4,6 +4,7 @@ namespace Dcat\Admin\DcatConfig;
 
 use Dcat\Admin\Extend\ServiceProvider;
 use Dcat\Admin\Admin;
+use Illuminate\Support\Facades\DB;
 
 class DcatConfigServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,9 @@ class DcatConfigServiceProvider extends ServiceProvider
 	public function init()
 	{
 		parent::init();
+        foreach (DB::table(config('admin.database.config_table'))->get() as $config) {
+            config([$config->key => $config->value]);
+        }
 	}
 
 	public function settingForm()
