@@ -35,6 +35,6 @@ class CreateConfigTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('config');
+        Schema::dropIfExists(config('admin.database.config_table'));
     }
 }
