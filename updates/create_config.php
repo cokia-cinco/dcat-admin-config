@@ -18,7 +18,7 @@ class CreateConfigTable extends Migration
             $table->string("tab");
             $table->string("key");
             $table->string("name");
-            $table->string("value");
+            $table->text("value");
             $table->text("help");
             $table->string("element");
             $table->tinyInteger("order");
