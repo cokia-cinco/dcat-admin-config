@@ -302,7 +302,6 @@ class Builder
      */
     public function save()
     {
-        dd($this->model);
         return admin_setting(["cin::admin_config" => $this->model]);
     }
 }
